@@ -1,0 +1,98 @@
+﻿@model basicForm.Models.tbl_user
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_descruption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_descruption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_is_intrested_inJava)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_is_intrested_inJava)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_is_intrested_cSharp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_is_intrested_cSharp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.use_is_intrested_pythod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.use_is_intrested_pythod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country.country_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country.country_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.user_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

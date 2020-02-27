@@ -1,0 +1,88 @@
+﻿@model IEnumerable<basicForm.Models.tbl_user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "open")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_descruption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_is_intrested_inJava)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_is_intrested_cSharp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.use_is_intrested_pythod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country.country_name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_descruption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_is_intrested_inJava)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_is_intrested_cSharp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.use_is_intrested_pythod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.country.country_name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.user_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.user_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.user_id })
+            </td>
+        </tr>
+    }
+
+</table>
